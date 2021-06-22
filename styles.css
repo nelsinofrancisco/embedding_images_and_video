@@ -1,0 +1,119 @@
+/* ***** DEFAULTS ***** */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ***** NAV BAR ***** */
+
+/** 
+  * First Element of the nav-bar
+  *
+  *
+  */
+
+.nav-bar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    padding: 0px 30px;
+    width: calc(100% - 60px);
+    justify-content: space-between;
+}
+
+.nav-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-bars {
+    padding:  10px;
+}
+
+.yt-logo {
+    max-width: 100px;
+    padding: 18px 15px 15px 15px;
+}
+
+/** 
+  * Second Element of the nav-bar
+  *
+  *
+  */
+.nav-sec .nav-sec-2 {
+    margin: 0;
+}
+.yt-search-bar {
+    min-width: 15vw;
+    width: 39vw;
+    height: 25px;
+    margin: 0!important;
+    padding: 0px 15px;
+    border: 1px solid rgb(240, 240, 240);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.keyboard-icons {
+    width: 0;
+}
+
+.keyboard-icons > i {
+    display: block;
+    color: gray;
+    position: relative;
+    left: -28px;
+}
+
+
+.keyboard-icons:hover > i {
+    color: black;
+}
+
+.vid-search-box {
+    display: block;
+    background-color: #f0f0f0;
+    width: 8vh;
+    height: 25px;
+    border: 1px solid #d3d3d3;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.magnifying-glass {
+    display: block;
+    margin: 5px auto;
+    max-width: 15px;
+    max-height: 15px;
+}
+
+.voice-icon {
+    display: block;
+    margin: 0;
+    padding: 0 15px;
+    width: 20px;
+    height: 20px;
+}
+
+/* 
+ *
+ * Third Section of Nav Bar
+ *
+ */
+
+
+.blank-profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+

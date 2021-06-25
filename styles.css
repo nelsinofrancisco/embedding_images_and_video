@@ -370,6 +370,9 @@ text-decoration: none;
 }
 
 /******* COMMENTARY SECTION *******/
+.commentary-section {
+    width: var(--max-width);
+}
 
 .add-commentary {
     display: block;

@@ -33,7 +33,7 @@ i, span {
     top: 0;
     left: 0;
     flex-direction: row;
-    padding: 0px 30px;
+    padding: 0px 20px;
     width: calc(100% - 60px);
     max-height: 56px;
     justify-content: space-between;
@@ -98,7 +98,6 @@ i, span {
     left: -28px;
 }
 
-
 .keyboard-icons:hover > i {
     color: black;
 }
@@ -156,17 +155,17 @@ i, span {
 
 /******* MAIN SECTION ********/
 
-.video-row-columns {
+.main-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    max-width: calc( 1280px + 402px + (3*24px));
+    max-width: calc(1280px + 402px + (3*24px));
 }
 
 /****** FIRST COLUMN ********/
 .first-column {
-    --max-width: calc((100vh - 216px) * (16/9));
+    --max-width: calc((100vh - 236px) * (16/9));
     --min-width: calc(240px * (16/9));
     display: flex;
     min-width: var(--min-width);
@@ -227,6 +226,7 @@ i, span {
     display: flex;
     flex-direction: row;
     list-style: none;
+    font-size: 0.9em;
     color: #707070;
     padding: 0;
 }
@@ -236,22 +236,26 @@ i, span {
 }
 .vid-description-second-item .icon {
     text-decoration: none;
-    padding-left: 20px;
+    padding: 0;
+    
 }
 
 .vid-description-second-item a {
     text-decoration: none;
-    padding-left: 4px;
+    padding-right: 6px;
+    margin-bottom: 12px;
 }
 
 .vid-description-second-item i {
-    font-size: 1.1em;
+    color: #909090;
+    font-size: 1.5em;
+    padding: 6px;
 }
 
 .vid-description-second-item span {
-    font-size: 0.85em;
-    font-weight: 500;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    color: #606060;
+    font-weight: 570;
 }
 
 .li-dot::before {
@@ -280,6 +284,8 @@ i, span {
 
 .channel-info {
     border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    margin: 0 0 24px;
 }
 
 .channel-owner-row {
@@ -306,8 +312,8 @@ i, span {
 
 .channel-link {
     text-decoration: none;
-    font-weight: 700;
-    font-size: 0.95em;
+    font-weight: 600;
+    font-size: 14px;
     color: black;
 }
 
@@ -341,6 +347,7 @@ i, span {
     display: flex;
     flex-direction: column;
     margin-left: 68px;
+    padding: 0 0 16px;
 }
 
 .spotify-link {
@@ -358,15 +365,257 @@ text-decoration: none;
 .show-more-link {
     font-size: 13px;
     color: #606060;
-    font-weight: 700;
     text-decoration: none;
     margin: 15px 0px 0px;
 }
 
-hr {
+/******* COMMENTARY SECTION *******/
+
+.add-commentary {
+    display: block;
+    margin: 24px 0 32px;
+}
+
+.add-commentary .title-commentary-header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.add-commentary .commentary-header-icon {
+    padding: 0 5px 0 24px;
+}
+
+.add-commentary .add-commentary-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.commentary-profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.add-commentary-input .commentary-input {
+    height: 24px;
+    width: 100%;
+    padding: 0 0 4px;
     border: none;
+    background-color: transparent;
     border-bottom: 1px solid #bbb;
 }
+
+/* FIXED COMENTARY STYLING*/
+
+.new-commentary-fixed {
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+/* Fixed Style for the commentary flex row */
+
+.commentary-space {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+/* Fixed Style for the commentary flex column */
+
+.commentary-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.commentary-column > span{
+    color: black;
+    font-size: 14px;
+    line-height: 1.4em;
+}
+
+/* color of time links */
+
+.commentary-column span > a {
+    text-decoration: none;
+    color: #4343ff;
+    padding-right: 8px;
+}
+
+/** thumbtack row **/
+
+.commentary-column .fixed-by{
+    font-size: 12px;
+    margin: 0 0 15px;
+}
+
+.commentary-column .fixed-by span{
+    color: #909090;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* commentary fixed from owner styles */
+
+.commentary-column .commentary-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 6px;
+}
+
+.commentary-column .commentary-name a {
+    text-decoration: none;
+    text-transform: none;
+    font-size: 12px;
+    padding-left: 3px;
+}
+
+
+.commentary-name .fixed-commentary-name span {
+    background-color: #808080;
+    padding: 2px 6px;
+    font-size: 13px;
+    color: white;
+    font-weight: 600px;
+    border-radius: 12px;
+}
+
+
+/* DEFAULT COMMENTS STYLES */
+
+/* STYLES FOR COMENT SECTION */
+
+.generic-commentary {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.main-generic-commentary-div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 4px;
+}
+
+.generic-commentary-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.generic-commentary-column > span{
+    color: black;
+    font-size: 14px;
+    line-height: 1.4em;
+}
+
+.generic-commentary-column span > a {
+    text-decoration: none;
+    color: #4343ff;
+    padding-right: 8px;
+}
+
+/* OK !!! */
+
+.generic-commentary-header {
+    padding-bottom: 3px;
+}
+
+.generic-commentary-header > a {
+    text-decoration: none;
+}
+
+.generic-commentary-header .user-name {
+    font-size: 13px;
+    color: black;
+}
+
+.generic-commentary-header a > span {
+    font-size: 12px;
+    color: #707070;
+    
+}
+
+/* ^ */
+
+
+/* STYLES FOR READ MORE DEFAULT */
+
+.read-more {
+    text-decoration: none;
+    font-weight: 500;
+    padding-top: 8px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+    color:#707070;
+}
+
+
+
+/**** LIKES ROW DEFAULT ****/
+
+.likes-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.likes-row i{
+    font-size: 18px;
+    color: #808080;
+    padding-right: 10px;
+}
+
+.likes-row span {
+    font-size: 12px;
+    color: #808080;
+    padding-right: 20px;;
+}
+
+.likes-row a {
+    text-decoration: none;
+}
+
+.likes-row-answer {
+    padding-left: 10px;
+}
+
+
+/* SHOW MORE ANSWERS */
+
+.more-answers {
+    margin-left: 56px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.more-answers a {
+    text-decoration: none;
+}
+
+.more-answers a > i {
+    color: #4343ff;
+}
+
+.more-answers span {
+    color: #4343ff;
+    padding-left: 10px;
+}
+
+
+
+
 /****** SECOND COLUMN *******/
 .second-column {
     display: flex;

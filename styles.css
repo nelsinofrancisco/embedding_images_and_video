@@ -38,6 +38,7 @@ i, span {
     max-height: 56px;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.985);
+    z-index: 99;
 }
 
 .nav-sec {
@@ -79,12 +80,13 @@ i, span {
 .yt-search-bar {
     min-width: 15vw;
     width: 39vw;
-    height: 24px;
+    height: 30px;
     margin: 0!important;
     padding: 0px 15px;
     border: 1px solid #d3d3d3;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+    font-size: 16px;
 }
 
 .keyboard-icons {
@@ -106,7 +108,7 @@ i, span {
     display: block;
     background-color: #f0f0f0;
     width: 8vh;
-    height: 24px;
+    height: 30px;
     border: 1px solid #d3d3d3;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -114,7 +116,7 @@ i, span {
 
 .magnifying-glass {
     display: block;
-    margin: 5px auto;
+    margin: calc(15px/2) auto;
     max-width: 15px;
     max-height: 15px;
 }
@@ -159,8 +161,7 @@ i, span {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    max-width: calc(1280px + 402px + (3*24px));
+    align-items: flex-start;
 }
 
 /****** FIRST COLUMN ********/
@@ -171,7 +172,7 @@ i, span {
     min-width: var(--min-width);
     width: var(--max-width);
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     margin: 0 0 0 24px;
     padding: 24px 24px 0 0;
 }
@@ -624,11 +625,260 @@ text-decoration: none;
     display: flex;
     min-width: 300px;
     max-width: 402px;
-    width: 100%;
+    padding: 24px 24px 0 0;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
+
+/******* TAGS-HEADER *******/
+
+.tags-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.tags-header div {
+    background-color: #E0E0E0;
+    padding: 0px 12px;
+    margin: 0px 8px 0px 0px;
+    max-height: 32px;
+    border: 1px solid #bbb;
+    border-radius: 16px;
+}
+.tags-header .first-tag {
+    background-color: #000000;
+    padding: 0px 12px;
+    margin: 0px 8px 0px 0px;
+    max-height: 32px;
+    border: 1px solid black;
+    border-radius: 16px;
+    
+}
+.tags-header .first-tag > span {
+    display: block;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    padding: calc(11px/2) 0px;
+}
+
+.tags-header span {
+    display: block;
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+    padding: calc(11px/2) 0px;
+}
+
+.tags-header i {
+    margin-left: 25px;
+    font-size: 14px;
+    
+}
+
+/******* DEFAULTS FOR VIDEO PREVIEW *****/
+
+.video-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0;
+    margin-top: 10px;
+    max-height: 98px;
+}
+
+/* IMG PREVIEW STYLES */
+
+.img-preview {
+    text-decoration: none;
+}
+
+.img-preview img {
+    width: 168px;
+    height: 94px;
+}
+
+.img-preview .normal {
+    display: block;
+}
+
+.img-preview .hover {
+    display: none;
+}
+
+.img-preview:hover .normal{
+    display: none;
+}
+
+.img-preview:hover .hover {
+    display: block;
+}
+
+.img-preview:hover  .time-lenght{
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+}
+
+.img-preview:hover .watch-later {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.img-preview:hover .add-playlist {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.img-preview:hover .play-button {
+    opacity: 0.7;
+    transition: opacity 0.5s ease-in;
+}
+
+/* TIME-LENGHT STYLES */
+
+.time-lenght.less-than-1hour {
+    --time0to1hour-maxwidth: 32px;  
+    background-color: black;
+    position: relative;
+    bottom: 25px;
+    right: -120px;
+    margin: 4px;
+    height: 12px;
+    max-width: var(--time0to1hour-maxwidth);
+    padding: 3px 4px;
+    border-radius: 2px;
+}
+
+.time-lenght.more-than-1hour {
+    --time1to9hours-maxwidth: 42px;
+    background-color: black;
+    position: relative;
+    bottom: 25px;
+    right: -111px;
+    margin: 4px;
+    height: 12px;
+    max-width: var(--time1to9hours-maxwidth);
+    padding: 3px 4px;
+    border-radius: 2px;
+}
+
+.time-lenght > span {
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* Watch Later */
+
+.watch-later {
+    display: block;
+    background-color: black;
+    font-size: 18px;
+    position: relative;
+    bottom: 116px;
+    right: -134px;
+    margin: 4px;
+    padding: 3px 4px;
+    border-radius: 2px;
+    height: 20px;
+    width: 18px;
+    opacity: 0;
+}
+
+.watch-later i {
+    color: white
+}
+
+/* add playlist */
+
+.add-playlist {
+    display: block;
+    background-color: black;
+    font-size: 18px;
+    position: relative;
+    bottom: 116px;
+    right: -134px;
+    margin: 4px;
+    padding: 3px 4px;
+    border-radius: 2px;
+    height: 20px;
+    width: 18px;
+    opacity: 0;
+}
+
+.add-playlist i {
+    color: white
+}
+
+/* play button */ 
+
+.play-button {
+    display: block;
+    background-color: transparent;
+    font-size: 28px;
+    position: relative;
+    bottom: 146px;
+    left: 67px;
+    margin: 4px;
+    padding: 3px 4px;
+    border-radius: 2px;
+    height: 30px;
+    width: 26px;
+    opacity: 0;
+}
+
+.play-button i {
+    color: white
+}
+
+/* video description preview */
+
+.video-description-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 0;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.video-title-preview {
+    color: #393939;
+    font-size: 14px;
+    font-weight: 550;
+    max-width: 202px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.video-owner-preview {
+    color: #606060;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.video-description-preview > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    font-size: 12px;
+    height: 20px;
+}
+
+.video-description-preview > ul li {
+    margin: 0;
+}
 /* ******** MEDIA ******** */
 
 @media (max-width: 1050px) {

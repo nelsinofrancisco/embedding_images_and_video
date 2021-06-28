@@ -1062,20 +1062,6 @@ text-decoration: none;
 
     @media (min-height: 518px) {
 
-        /****** FIRST COLUMN ********/
-        .first-column {
-            display: flex;
-            min-width: var(--min-width);
-            width: var(--max-width);
-            max-width: 1280px;
-            height: 100%;
-            max-height: 4000px;
-            flex-direction: column;
-            justify-content: start;
-            margin: 0 0 0 24px;
-            padding: 24px 24px 0 0;
-        }
-
         /****** EMBED ******/
 
         .embed-video iframe {
